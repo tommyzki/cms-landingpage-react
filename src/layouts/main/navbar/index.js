@@ -6,19 +6,14 @@ import { Container, Box, AppBar, Toolbar, IconButton, Typography, Menu, Button, 
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // components
-
 import Iconify from '../../../components/iconify';
 import NavSection from '../../../components/nav-section';
+import NavVerticalSection from '../../../components/nav-vertical-section';
 //
 import navbarConfig from './config';
-
 // ----------------------------------------------------------------------
 
-const NAV_WIDTH = 280;
-
 const HEADER_MOBILE = 64;
-
-const HEADER_DESKTOP = 92;
 
 const StyledRoot = styled(AppBar)(({ theme }) => ({
   ...bgBlur({ color: theme.palette.background.default }),
@@ -137,11 +132,12 @@ export default function Navbar({ onOpenNav }) {
                 <></>
               </Box>
               <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-                {pages.map((page) => (
+                {/* {pages.map((page) => (
                   <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, display: 'block' }}>
                     {page} + is
                   </Button>
-                ))}
+                ))} */}
+                <NavVerticalSection data={navbarConfig} />
               </Box>
             </Toolbar>
           </Container>

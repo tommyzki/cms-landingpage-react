@@ -11,6 +11,7 @@ import ProductsPage from './pages/ProductsPage';
 import DashboardAppPage from './pages/DashboardAppPage';
 import HomePage from './pages/HomePage';
 import MainLayout from './layouts/main/MainLayout';
+import AboutPage from './pages/AboutPage';
 
 // ----------------------------------------------------------------------
 
@@ -21,6 +22,8 @@ export default function Router() {
       children: [
         { element: <Navigate to="home" />, index: true },
         { path: 'home', element: <HomePage /> },
+        { path: 'products', element: <ProductsPage /> },
+        { path: 'about', element: <AboutPage /> },
         { path: '*', element: <Navigate to="/404" /> },
         { path: '404', element: <Page404 /> },
       ],

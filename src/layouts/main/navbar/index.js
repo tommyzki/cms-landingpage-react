@@ -19,17 +19,18 @@ const StyledRoot = styled(AppBar)(({ theme }) => ({
   ...bgBlur({ color: theme.palette.background.default }),
   boxShadow: 'none',
   color: theme.palette.primary,
-//   padding: '0px'
+  backgroundColor: 'transparent',
+  //   padding: '0px'
 }));
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   minHeight: HEADER_MOBILE,
   paddingLeft: '0 !important',
-  paddingRight: '0 !important'
-//   [theme.breakpoints.up('lg')]: {
-//     minHeight: HEADER_DESKTOP,
-//     padding: '0px',
-//   },
+  paddingRight: '0 !important',
+  //   [theme.breakpoints.up('lg')]: {
+  //     minHeight: HEADER_DESKTOP,
+  //     padding: '0px',
+  //   },
 }));
 
 // ----------------------------------------------------------------------
@@ -53,96 +54,92 @@ export default function Navbar({ onOpenNav }) {
   };
   return (
     <StyledRoot>
-      <StyledToolbar>
-        <AppBar color='default' position="static">
-          <Container maxWidth="xl">
-            <Toolbar disableGutters>
-              <Typography
-                variant="h6"
-                noWrap
-                component="a"
-                href="/"
-                sx={{
-                  mr: 2,
-                  display: { xs: 'none', md: 'flex' },
-                  fontFamily: 'monospace',
-                  fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  color: 'text.primary',
-                  textDecoration: 'none',
-                }}
-              >
-                LOGO Min
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
-                <IconButton
-                  size="large"
-                  aria-label="account of current user"
-                  aria-controls="menu-appbar"
-                  aria-haspopup="true"
-                  onClick={handleOpenNavMenu}
-                  color="text.primary"
-                >
-                  <Iconify icon="eva:menu-2-fill" />
-                </IconButton>
-                <Menu
-                  id="menu-appbar"
-                  anchorEl={anchorElNav}
-                  anchorOrigin={{
-                    vertical: 'bottom',
-                    horizontal: 'left',
-                  }}
-                  keepMounted
-                  transformOrigin={{
-                    vertical: 'top',
-                    horizontal: 'left',
-                  }}
-                  open={Boolean(anchorElNav)}
-                  onClose={handleCloseNavMenu}
-                  sx={{
-                    display: { xs: 'block', md: 'none' },
-                  }}
-                >
-                  {pages.map((page) => (
-                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">{page}</Typography>
-                    </MenuItem>
-                  ))}
-                </Menu>
-              </Box>
-              <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href=""
-                sx={{
-                  mr: 2,
-                  display: { xs: 'flex', md: 'none' },
-                  flexGrow: 1,
-                  fontFamily: 'monospace',
-                  fontWeight: 700,
-                  letterSpacing: '.3rem',
-                  color: 'text.primary',
-                  textDecoration: 'none',
-                }}
-              >
-                LOGO tgh
-              </Typography>
-              <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                <></>
-              </Box>
-              <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-                {/* {pages.map((page) => (
+      <Container>
+        <StyledToolbar>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'text.primary',
+              textDecoration: 'none',
+            }}
+          >
+            LOGO Min
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="text.primary"
+            >
+              <Iconify icon="eva:menu-2-fill" />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: 'block', md: 'none' },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+          <Typography
+            variant="h5"
+            noWrap
+            component="a"
+            href=""
+            sx={{
+              mr: 2,
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              fontFamily: 'monospace',
+              fontWeight: 700,
+              letterSpacing: '.3rem',
+              color: 'text.primary',
+              textDecoration: 'none',
+            }}
+          >
+            LOGO tgh
+          </Typography>
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <></>
+          </Box>
+          <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
+            {/* {pages.map((page) => (
                   <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, display: 'block' }}>
                     {page} + is
                   </Button>
                 ))} */}
-                <NavVerticalSection data={navbarConfig} />
-              </Box>
-            </Toolbar>
-          </Container>
-        </AppBar>
-      </StyledToolbar>
+            <NavVerticalSection data={navbarConfig} />
+          </Box>
+        </StyledToolbar>
+      </Container>
     </StyledRoot>
   );
 }

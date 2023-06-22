@@ -26,6 +26,11 @@ const navbarConfig = [
     path: '/blog',
     icon: icon('ic_blog'),
   },
+  {
+    title: 'galery',
+    path: '/galery',
+    icon: icon('ic_blog'),
+  },
 ];
 
 export default navbarConfig;

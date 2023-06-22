@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Container, Box, AppBar, Toolbar, IconButton, Typography, Menu } from '@mui/material';
+import { Container, Box, AppBar, Toolbar, IconButton, Menu } from '@mui/material';
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // components
@@ -9,6 +9,7 @@ import Iconify from '../../../components/iconify';
 import NavVerticalSection from '../../../components/nav-vertical-section';
 //
 import navbarConfig from './config';
+import Logo from '../../../components/logo/Logo';
 // ----------------------------------------------------------------------
 
 const HEADER_MOBILE = 64;
@@ -25,6 +26,7 @@ const StyledToolbar = styled(Toolbar)(() => ({
   minHeight: HEADER_MOBILE,
   paddingLeft: '0 !important',
   paddingRight: '0 !important',
+  justifyContent: 'space-between',
   //   [theme.breakpoints.up('lg')]: {
   //     minHeight: HEADER_DESKTOP,
   //     padding: '0px',
@@ -39,7 +41,6 @@ Navbar.propTypes = {
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
-  // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -52,24 +53,8 @@ export default function Navbar() {
     <StyledRoot>
       <Container>
         <StyledToolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'text.primary',
-              textDecoration: 'none',
-            }}
-          >
-            LOGO Min
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Logo sx={{ display: { xs: 'none', md: 'flex' } }} />
+          <Box sx={{ flex: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -102,27 +87,13 @@ export default function Navbar() {
               <NavVerticalSection data={navbarConfig} />
             </Menu>
           </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
+          <Logo
             sx={{
-              mr: 2,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'text.primary',
-              textDecoration: 'none',
             }}
-          >
-            LOGO tgh
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <></>
-          </Box>
+          />
+          <Box sx={{ flex: 1, display: { xs: 'flex', md: 'none' } }} />
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} />
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
             <NavVerticalSection data={navbarConfig} />
           </Box>

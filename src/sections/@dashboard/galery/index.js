@@ -1,0 +1,1 @@
+export { default as GaleryCard } from './GaleryCard'

@@ -12,6 +12,7 @@ import DashboardAppPage from './pages/DashboardAppPage';
 import HomePage from './pages/HomePage';
 import MainLayout from './layouts/main/MainLayout';
 import AboutPage from './pages/AboutPage';
+import GaleryPage from './pages/GaleryPage';
 
 // ----------------------------------------------------------------------
 
@@ -25,6 +26,7 @@ export default function Router() {
         { path: 'products', element: <ProductsPage /> },
         { path: 'about', element: <AboutPage /> },
         { path: 'blog', element: <BlogPage /> },
+        { path: 'galery', element: <GaleryPage /> },
         { path: '*', element: <Navigate to="/404" /> },
         { path: '404', element: <Page404 /> },
       ],

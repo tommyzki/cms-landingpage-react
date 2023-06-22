@@ -5,6 +5,7 @@ import About from '../sections/@main/about';
 import Product from '../sections/@shared/product';
 import Contactus from '../sections/@main/contactus';
 import Blog from '../sections/@shared/blog';
+import Galery from '../sections/@shared/galery';
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <About />
       <Product isPage={false} />
       <Blog isPage={false} />
+      <Galery isPage={false} />
       <Contactus />
     </>
   );

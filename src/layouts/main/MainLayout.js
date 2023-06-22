@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 // @mui
 import { styled } from '@mui/material/styles';
@@ -12,21 +11,19 @@ const StyledRoot = styled('div')({
   overflow: 'hidden',
 });
 
-const Main = styled('div')(({ theme }) => ({
+const Main = styled('div')(() => ({
   flexGrow: 1,
   overflow: 'auto',
   minHeight: '100%',
-  paddingBottom: theme.spacing(5),
 }));
 
 // ----------------------------------------------------------------------
 
 export default function MainLayout() {
-  const [open, setOpen] = useState(false);
 
   return (
     <StyledRoot>
-      <Navbar onOpenNav={() => setOpen(true)} />
+      <Navbar />
       <Main>
         <Outlet />
       </Main>

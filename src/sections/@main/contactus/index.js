@@ -6,6 +6,7 @@ const ContactusLayoutRoot = styled('section')(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'center',
+  marginBottom: theme.spacing(10),
 }));
 
 export default function Contactus() {

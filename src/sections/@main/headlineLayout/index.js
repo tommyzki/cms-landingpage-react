@@ -36,6 +36,7 @@ function HeadlineLayout(props) {
           flexDirection: 'column',
           paddingRight: {md: '55vw', xl: '30vw'},
           alignItems: {xs: 'center', md:'start'},
+          textAlign: {xs: 'center', md:'start'}
         }}
       >
         {children}

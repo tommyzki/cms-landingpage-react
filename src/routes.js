@@ -24,6 +24,7 @@ export default function Router() {
         { path: 'home', element: <HomePage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'about', element: <AboutPage /> },
+        { path: 'blog', element: <BlogPage /> },
         { path: '*', element: <Navigate to="/404" /> },
         { path: '404', element: <Page404 /> },
       ],

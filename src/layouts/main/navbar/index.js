@@ -1,13 +1,11 @@
 import { useState } from 'react';
-import PropTypes from 'prop-types';
 // @mui
 import { styled } from '@mui/material/styles';
-import { Container, Box, AppBar, Toolbar, IconButton, Typography, Menu, Button, MenuItem } from '@mui/material';
+import { Container, Box, AppBar, Toolbar, IconButton, Typography, Menu } from '@mui/material';
 // utils
 import { bgBlur } from '../../../utils/cssStyles';
 // components
 import Iconify from '../../../components/iconify';
-import NavSection from '../../../components/nav-section';
 import NavVerticalSection from '../../../components/nav-vertical-section';
 //
 import navbarConfig from './config';
@@ -23,7 +21,7 @@ const StyledRoot = styled(AppBar)(({ theme }) => ({
   //   padding: '0px'
 }));
 
-const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+const StyledToolbar = styled(Toolbar)(() => ({
   minHeight: HEADER_MOBILE,
   paddingLeft: '0 !important',
   paddingRight: '0 !important',
@@ -36,12 +34,10 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 Navbar.propTypes = {
-  onOpenNav: PropTypes.func,
+  // onOpenNav: PropTypes.func,
 };
 
-const pages = ['Products', 'Pricing', 'Blog'];
-
-export default function Navbar({ onOpenNav }) {
+export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   // const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -101,12 +97,9 @@ export default function Navbar({ onOpenNav }) {
               sx={{
                 display: { xs: 'block', md: 'none' },
               }}
+              MenuListProps={{ sx: { padding: '8px' } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              <NavVerticalSection data={navbarConfig} />
             </Menu>
           </Box>
           <Typography
@@ -131,11 +124,6 @@ export default function Navbar({ onOpenNav }) {
             <></>
           </Box>
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
-            {/* {pages.map((page) => (
-                  <Button key={page} onClick={handleCloseNavMenu} sx={{ my: 2, display: 'block' }}>
-                    {page} + is
-                  </Button>
-                ))} */}
             <NavVerticalSection data={navbarConfig} />
           </Box>
         </StyledToolbar>

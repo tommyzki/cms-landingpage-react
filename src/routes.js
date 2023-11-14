@@ -13,6 +13,8 @@ import HomePage from './pages/HomePage';
 import MainLayout from './layouts/main/MainLayout';
 import AboutPage from './pages/AboutPage';
 import GaleryPage from './pages/GaleryPage';
+import MenuPage from './pages/MenuPage';
+import MenuDetailPage from './pages/MenuDetailPage';
 
 // ----------------------------------------------------------------------
 
@@ -23,6 +25,8 @@ export default function Router() {
       children: [
         { element: <Navigate to="home" />, index: true },
         { path: 'home', element: <HomePage /> },
+        { path: 'menu', element: <MenuPage /> },
+        { path: 'menu/:id', element: <MenuDetailPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'about', element: <AboutPage /> },
         { path: 'blog', element: <BlogPage /> },
@@ -37,6 +41,7 @@ export default function Router() {
       children: [
         { element: <Navigate to="/dashboard/app" />, index: true },
         { path: 'app', element: <DashboardAppPage /> },
+        { path: 'menu', element: <MenuPage /> },
         { path: 'user', element: <UserPage /> },
         { path: 'products', element: <ProductsPage /> },
         { path: 'blog', element: <BlogPage /> },

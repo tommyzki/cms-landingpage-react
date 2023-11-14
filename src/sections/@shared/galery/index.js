@@ -27,7 +27,7 @@ export default function Galery({ isPage, isCreate }) {
       <Container>
         {isPage ? (
           <>
-            <Stack sx={{ mb: 1, mt: 12 }} direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+            <Stack sx={{ mb: 6, mt: 6 }} direction="row" alignItems="center" justifyContent="space-between" mb={5}>
               <Typography variant="h3" gutterBottom>
                 Galery
               </Typography>
@@ -48,7 +48,7 @@ export default function Galery({ isPage, isCreate }) {
           </>
         ) : (
           <>
-            <Stack sx={{ mb: 5 }} direction="row" alignItems="center" justifyContent="space-between" mb={5}>
+            <Stack sx={{ mb: 6 }} direction="row" alignItems="center" justifyContent="space-between" mb={5}>
               <Typography variant="h3" gutterBottom>
                 Galery
               </Typography>

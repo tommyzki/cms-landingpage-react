@@ -19,7 +19,7 @@ const StyledRoot = styled(AppBar)(({ theme }) => ({
   boxShadow: 'none',
   color: theme.palette.primary,
   backgroundColor: 'transparent',
-  //   padding: '0px'
+  borderBottom: '1px solid #b5b3b3'
 }));
 
 const StyledToolbar = styled(Toolbar)(() => ({

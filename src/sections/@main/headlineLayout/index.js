@@ -12,6 +12,7 @@ const ProductHeroLayoutRoot = styled('section')(({ theme }) => ({
   minHeight: 500,
   maxHeight: 1300,
   marginBottom: theme.spacing(10),
+  backgroundColor: 'rgba(255,255,255,0.55)',
 }));
 
 const Background = styled(Box)({

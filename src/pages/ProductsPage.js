@@ -9,7 +9,7 @@ export default function ProductsPage() {
   return (
     <>
       <Helmet>
-        <title> Products | Minimal UI </title>
+        <title> Tan Patisserie - Products </title>
       </Helmet>
 
       <Product isPage={isPage} isCreate={isCreate}  />

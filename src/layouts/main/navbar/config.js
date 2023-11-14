@@ -17,15 +17,20 @@ const navbarConfig = [
     icon: icon('ic_user'),
   },
   {
-    title: 'product',
-    path: '/products',
-    icon: icon('ic_cart'),
+    title: 'menu',
+    path: '/menu',
+    icon: icon('ic_user'),
   },
-  {
-    title: 'blog',
-    path: '/blog',
-    icon: icon('ic_blog'),
-  },
+  // {
+  //   title: 'product',
+  //   path: '/products',
+  //   icon: icon('ic_cart'),
+  // },
+  // {
+  //   title: 'blog',
+  //   path: '/blog',
+  //   icon: icon('ic_blog'),
+  // },
   {
     title: 'galery',
     path: '/galery',

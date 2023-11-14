@@ -13,10 +13,10 @@ const Logo = forwardRef(({ disabledLink = false, sx, ...other }, ref) => {
       ref={ref}
       component="div"
       sx={{
-        width: 40,
+        width: 114,
         height: 40,
         display: 'inline-block',
-        bgcolor: 'currentColor',
+        bgcolor: 'common.black',
         mask: `url(${src}) no-repeat center / contain`,
         WebkitMask: `url(${src}) no-repeat center / contain`,
         ...sx,
